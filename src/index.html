@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="output.css">
+        <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+        <script src="main.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Url shortener</title>
+    </head>
+    <body class="">
+    <main class="w-full text-lg text-center">
+
+        <header class="md:max-w-3xl lg:max-w-5xl xl:max-w-7xl  mx-auto px-6 flex justify-between items-center pt-9 pb-5 lg:gap-x-15 relative">
+            <a class="hover:cursor-pointer h-fit z-0" href="#">
+                <img src="../images/logo.svg" alt="logo">
+            </a>
+            <nav class="hidden lg:flex lg:grow z-0 justify-between items-center" aria-label="Desktop navigation">
+                <ul class="flex gap-x-7 text font-medium" aria-label="navigation links">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Features</a>
+                    </li>
+                <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Pricing</a>
+                    </li>
+                <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Resources</a>
+                    </li>
+                </ul>
+                <div class="entry flex gap-x-7 items-center text font-medium">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">Login</a>
+
+                    <button type="button" class="py-2.5 px-7 text-white rounded-4xl font-medium hover:">Sign up</button>
+                </div>
+            </nav>
+            <a class="navButton hover:cursor-pointer lg:hidden z-0" aria-label="mobileNav" href="#">
+                <img src="../images/navicon.png" alt="nav-logo">
+            </a>
+            <section class="navMenu hidden absolute z-1 top-[90%] inset-x-0 w-[85%] mx-auto bg-[hsl(257,27%,26%)] rounded-lg text-white p-8 text-[16px] font-bold" aria-label="mobile-nav">
+                <ul class="flex flex-col gap-y-4 pb-4 border-b border-b-[hsl(257,7%,40%)]" aria-label="navigation links">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Features</a>
+                    </li>
+                <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Pricing</a>
+                    </li>
+                <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Resources</a>
+                    </li>
+                </ul>
+                <div class="entry gap-y-4 pt-4 flex flex-col justify-center items-center ">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">Login</a>
+
+                    <button type="button" class="py-2.5 px-7 text-white rounded-4xl w-full *:">Sign up</button>
+                </div>
+            </section>
+        </header>
+
+        <section class="md:max-w-3xl lg:max-w-5xl xl:max-w-7xl  mx-auto px-6 grid grid-rows-1 lg:grid-cols-2 lg:grid-re sectionOne gap-y-7 pt-15 pb-25">
+            <img class="desktop ranslate-x-[27%] lg:order-2" src="../images/illustration-working.svg" alt="person working at a desktop">
+
+            <article class="lg:order-1 place-self-center lg:text-start">
+                <h2 class="font-bold text-4xl">More than just shorter links</h2>
+                <div class="text pt-4 pb-6 font-medium">
+                    Build your brand’s recognition and get detailed insights on how your links are performing.
+                </div>
+                <button type="button" class="py-3 px-8 text-white rounded-4xl font-medium">Get Started</button>
+            </article>
+        </section>
+
+        <section class="wrap relative">
+            <div class="groundLayer grid grid-rows-2 min-h-full absolute  z-1 inset-0">
+                <div class="bg-white grid grid-rows-2 "></div>
+                <div class="bg-[hsl(257,20%,92%)]"></div>
+            </div>
+
+            <div class="formLayerWrap relative w-full h-auto px-10 py-5 lg:px-14 lg:py-7.5 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                <div class=" formBackground absolute inset-0 z-2 px-6">
+                    <div class="w-full relative h-full bg-[hsl(257,27%,26%)] rounded-xl overflow-clip">
+                        <img src="../images/bg-shorten-mobile.svg" class="absolute top-0 right-0 lg:hidden" alt="">
+
+                        <img src="../images/bg-shorten-desktop.svg" class="absolute top-0 right-0 hidden lg:block" alt="">
+                    </div>
+                </div>
+                <form action="" class="relative z-3 font-semibold flex flex-col lg:flex-row lg:gap-x-2 gap-y-2">
+                    <div class="grow flex flex-col gap-y-1 lg:gap-x-3 lg:min-h-full">
+                        <input 
+                        type="text"
+                        class="h-fit formInput lg:min-h-full p-2 lg:p-4 text-[hsl(257,7%,33%)] bg-white w-full rounded-lg outline-none border-3 focus:border-[hsl(180,66%,60%)]"
+                        placeholder="Shorten a link here..."
+                        name="link input"
+                        aria-label="link input"
+                        >
+                        <div class="error invisible text-[10px] font-medium italic w-fit text-red-400" aria-label="error">
+                            
+                        </div>
+                    </div>
+
+                    <button 
+                    type="submit" 
+                    class="formSubmit w-full py-2 px-8 lg:px-4 text-white rounded-lg lg:w-1/5 lg:min-h-full"
+                    >
+                        Shorten it!
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="wrap relative">
+            <div class=" bg-[hsl(257,20%,92%)] absolute z-0 inset-0"></div>
+
+            <div class="relative shortUrls hidden flex-col gap-y-4 px-6 py-5 lg:px-6 lg:py-7.5 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl  mx-auto" aria-label="shortened-urls">
+
+                <template id="urlTemplate">
+                    <section class="hidden min-h-3 w-full flex-col lg:flex-row grid-cols-2 gap-y-0.5 link-section text-sm text-start font-medium lg:bg-white lg:rounded-lg lg:px-8" aria-label="link-section">
+
+                        <div class="grow min-w-0 w-full lg:max-w-[50%] truncate bg-white py-2 px-4 lg:px-0 rounded-t-sm originalLink lg:flex lg:justify-start lg:items-center" aria-label="original-link">
+                            
+                        </div>
+
+                        <div class="grow flex flex-col lg:flex-row lg:justify-end lg:items-center lg:gap-x-4 lg:py-4 gap-y-3 pt-2 pb-4 px-4 lg:px-0 bg-white rounded-b-sm text-[hsl(180,66%,49%)]">
+                            <div class="shortLink" aria-label="shortLink">
+                                
+                            </div>
+
+                            <div type="button" class="hover:cursor-pointer bg-[hsl(180,66%,49%)] hover:bg-[hsl(180,66%,60%)] py-2.5 px-7 text-white rounded-md font-bold copyLink text-center" aria-label="copy-shortened-link">Copy</div>
+                        </div>
+
+                    </section>
+                </template>
+
+            </div>
+        </section>
+
+        <section class="wrap relative">
+            <div class=" bg-[hsl(257,20%,92%)] absolute z-0 inset-0"></div>
+
+            <article class="py-20 lg:pb-50 relative z-1 inset-0 px-6 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto">
+                <div class="w-full max-w-[480px]  mx-auto">
+                    <h2 class="font-bold text-2xl">
+                        Advanced Statistics
+                    </h2>
+                    <div class="text pt-4 pb-6 font-medium">
+                        Track how your links are performing across the web with our advanced statistics dashboard.
+                    </div>
+                </div>
+                
+                <section class=" relative">
+                    <div class="absolute crossLayer grid grid-cols-1 grid-rows-1 place-content-center inset-0 z-0 ">
+                        <div class="bg-[hsl(180,66%,49%)] w-2 h-full lg:h-2 lg:w-full place-self-center">                    
+                        </div>
+                    </div>
+                    <div class="h-full mt-15 w-full max-w-[568px] lg:max-w-full m-auto articleLayer flex items-start flex-col gap-y-[85px] lg:flex-row lg:gap-x-[50px] inset-0 z-1 relative ">
+                        <article class="bg-white flex flex-col justify-center items-center rounded-lg px-8 lg:px-10">
+                            <div class="p-6 rounded-full bg-[hsl(257,27%,26%)] translate-y-[-50%]">
+                                <img src="../images/icon-brand-recognition.svg" alt="brand-recognition-logo">
+                            </div>
+                            <section class="pb-4">
+                                <h2 class="font-bold text-2xl  lg:text-lg">
+                                    Brand Recognition
+                                </h2>
+                                <div class="text text-sm pt-4 pb-6 font-medium">
+                                    Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="bg-white flex flex-col justify-center items-center rounded-lg lg:translate-y-10 px-8 lg:px-10">
+                            <div class="p-6 rounded-full bg-[hsl(257,27%,26%)] translate-y-[-50%]">
+                                <img src="../images/icon-detailed-records.svg" alt="detailed-records-logo">
+                            </div>
+                            <section class="pb-4">
+                                <h2 class="font-bold text-2xl  lg:text-lg">
+                                    Detailed Records
+                                </h2>
+                                <div class="text text-sm pt-4 pb-6 font-medium">
+                                    Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.
+                                </div>
+                            </section>
+                        </article>
+
+                        <article class="bg-white flex flex-col justify-center items-center rounded-lg lg:translate-y-20 px-8 lg:px-10 ">
+                            <div class="p-6 rounded-full bg-[hsl(257,27%,26%)] translate-y-[-50%]">
+                                <img src="../images/icon-fully-customizable.svg" alt="fully-customizable-logo">
+                            </div>
+                            <section class="pb-4">
+                                <h2 class="font-bold text-2xl  lg:text-lg">
+                                    Fully Customizable
+                                </h2>
+                                <div class="text text-sm pt-4 pb-6 font-medium">
+                                    Improve brand awareness and content discoverability through customizable  links, supercharging audience engagement.
+                                </div>
+                            </section>
+                        </article>
+
+
+                    </div>
+                </section>
+            </article>
+        </section>
+
+        <section class="w-full relative">
+            <div class="wrapper absolute inset-0 z-0 w-full h-full">
+                <div class="absolute inset-0 z-0 bg-[hsl(257,27%,26%)]"></div>
+                <img src="../images/bg-boost-mobile.svg" class="max-h-full w-full absolute inset-0 z-1 lg:hidden" alt="bg-boost-mobile">
+                <img src="../images/bg-boost-desktop.svg" class="max-h-full w-full absolute inset-0 z-1 hidden lg:block min-h-full" alt="bg-boost-desktop">
+            </div>
+            <section class="relative z-1 inset-0 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto py-18">
+
+                <h2 class="font-bold text-2xl text-white mb-5">Boost your links today</h2>
+
+                <button type="button" class="py-3 px-8 text-white rounded-4xl font-bold">Get Started</button>
+            </section>
+        </section>
+
+        <footer class="w-full relative">
+            <div class="wrapper absolute inset-0 z-0 w-full h-full bg-[hsl(260,8%,14%)]">
+            </div>
+
+            <section class="relative z-1 inset-0 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto py-18 flex flex-col gap-y-16 lg:flex-row lg:justify-center lg:gap-x-16">
+                <a href="http://#" class="grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="place-self-center lg:place-self-start" width="121" height="33">
+                        <path fill="#ffffff" d="M16.715 7.932c-.068-.09-.306-.26-.714-.51s-.918-.51-1.53-.782-1.281-.51-2.006-.714a8.005 8.005 0 00-2.176-.306c-1.995 0-2.992.669-2.992 2.006 0 .408.107.748.323 1.02.215.272.532.516.952.731.419.215.946.414 1.58.595l1.406.393.805.219c1.156.317 2.198.663 3.128 1.037.929.374 1.717.839 2.363 1.394a5.647 5.647 0 011.496 2.023c.35.793.527 1.745.527 2.856 0 1.36-.255 2.51-.765 3.451-.51.94-1.185 1.7-2.023 2.278-.84.578-1.802.997-2.89 1.258-1.088.26-2.21.391-3.366.391a19.68 19.68 0 01-5.44-.799c-.884-.26-1.74-.572-2.567-.935A14.358 14.358 0 01.53 22.28l2.448-4.862c.09.113.385.329.884.646.498.317 1.116.635 1.853.952.736.317 1.558.6 2.465.85.906.25 1.824.374 2.754.374 1.972 0 2.958-.6 2.958-1.802 0-.453-.148-.827-.442-1.122-.295-.295-.703-.561-1.224-.799a12.455 12.455 0 00-1.504-.56l-1.702-.495-.976-.288c-1.111-.34-2.074-.708-2.89-1.105-.816-.397-1.49-.856-2.023-1.377a5.003 5.003 0 01-1.19-1.802c-.261-.68-.391-1.473-.391-2.38 0-1.27.238-2.391.714-3.366a7.266 7.266 0 011.938-2.465 8.435 8.435 0 012.839-1.513c1.076-.34 2.215-.51 3.417-.51.838 0 1.666.08 2.482.238.816.159 1.598.363 2.346.612.748.25 1.445.533 2.09.85.647.317 1.242.635 1.786.952l-2.448 4.624zM40.139 25h-5.44V14.97c0-1.156-.227-2.006-.68-2.55-.454-.544-1.077-.816-1.87-.816-.318 0-.663.074-1.037.221a4.173 4.173 0 00-1.088.646 5.827 5.827 0 00-.97 1.003 4.4 4.4 0 00-.68 1.292V25h-5.44V.18h5.44v9.962a6.786 6.786 0 012.602-2.465c1.076-.578 2.26-.867 3.553-.867 1.201 0 2.17.21 2.907.629.736.42 1.303.952 1.7 1.598.396.646.663 1.371.799 2.176.136.805.204 1.592.204 2.363V25zm12.34.34c-1.519 0-2.873-.25-4.063-.748-1.19-.499-2.193-1.173-3.01-2.023a8.54 8.54 0 01-1.852-2.958 9.97 9.97 0 01-.63-3.519c0-1.224.21-2.397.63-3.519a8.54 8.54 0 011.853-2.958c.816-.85 1.819-1.53 3.009-2.04s2.544-.765 4.063-.765c1.519 0 2.867.255 4.046.765 1.179.51 2.176 1.19 2.992 2.04a8.754 8.754 0 011.87 2.958 9.736 9.736 0 01.646 3.519 9.97 9.97 0 01-.63 3.519 8.54 8.54 0 01-1.852 2.958c-.816.85-1.82 1.524-3.01 2.023-1.19.499-2.543.748-4.062.748zM48.5 16.092c0 1.405.374 2.533 1.122 3.383.748.85 1.7 1.275 2.856 1.275a3.59 3.59 0 001.564-.34c.476-.227.89-.544 1.24-.952a4.57 4.57 0 00.834-1.479 5.632 5.632 0 00.306-1.887c0-1.405-.374-2.533-1.122-3.383-.748-.85-1.689-1.275-2.822-1.275a3.702 3.702 0 00-2.84 1.292 4.57 4.57 0 00-.832 1.479 5.632 5.632 0 00-.306 1.887zm27.776-4.284c-1.315.023-2.505.238-3.57.646-1.065.408-1.836 1.02-2.312 1.836V25h-5.44V7.15h4.998v3.604c.612-1.201 1.4-2.142 2.363-2.822.963-.68 1.989-1.031 3.077-1.054h.544c.113 0 .227.011.34.034v4.896zm14.074 12.24a21.71 21.71 0 01-2.567.884c-.963.272-1.932.408-2.907.408-.68 0-1.32-.085-1.92-.255a4.286 4.286 0 01-1.582-.816c-.453-.374-.81-.867-1.07-1.479-.262-.612-.392-1.349-.392-2.21v-9.316h-2.278V7.15h2.278V1.472h5.44V7.15h3.638v4.114h-3.638v7.446c0 .59.147 1.014.442 1.275.295.26.669.391 1.122.391.408 0 .827-.068 1.258-.204.43-.136.805-.283 1.122-.442l1.054 4.318zM92.627.18h5.44v18.462c0 1.36.578 2.04 1.734 2.04.272 0 .572-.04.901-.119.329-.08.63-.198.901-.357l.714 4.08c-.68.317-1.462.567-2.346.748-.884.181-1.711.272-2.482.272-1.564 0-2.765-.408-3.604-1.224-.839-.816-1.258-1.995-1.258-3.536V.18zm11.456 27.506c.454.159.879.272 1.275.34a6.4 6.4 0 001.071.102c.658 0 1.168-.227 1.53-.68.363-.453.692-1.27.986-2.448l-6.8-17.85h5.61l4.148 13.192 3.57-13.192h5.1l-6.8 20.74a7.106 7.106 0 01-2.55 3.587c-1.224.918-2.674 1.377-4.352 1.377a8.17 8.17 0 01-1.377-.119 7.516 7.516 0 01-1.41-.391v-4.658z"/>
+                    </svg>
+                </a>
+                <section class="lg:text-start">
+                    <h2 class="font-bold mb-4 text-[hsl(0,0%,85%)]">
+                        Features
+                    </h2>
+                    <ul class="flex flex-col gap-y-2 text-[hsl(257,7%,63%)]">
+                        <li>
+                            <a href="http://">Link Shortening</a>
+                        </li>
+                        <li>
+                            <a href="http://">Branded Links</a>
+                        </li>
+                        <li>
+                            <a href="http://">Analytics</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="lg:text-start">
+                    <h2 class="font-bold mb-4 text-[hsl(0,0%,85%)]">
+                        Resources
+                    </h2>
+                    <ul class="flex flex-col gap-y-2 text-[hsl(257,7%,63%)]">
+                        <li>
+                            <a href="http://">Blog</a>
+                        </li>
+                        <li>
+                            <a href="http://">Developers</a>
+                        </li>
+                        <li>
+                            <a href="http://">Support</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="lg:text-start">
+                    <h2 class="font-bold mb-4 text-[hsl(0,0%,85%)]">
+                        About
+                    </h2>
+                    <ul class="flex flex-col gap-y-2 text-[hsl(257,7%,63%)]">
+                        <li>
+                            <a href="http://">Our Team</a>
+                        </li>
+                        <li>
+                            <a href="http://">Careers</a>
+                        </li>
+                        <li>
+                            <a href="http://">Contact</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="flex justify-center items-center gap-x-4 lg:items-start">
+                    <a href="http://#">
+                        <img src="../images/icon-facebook.svg" alt="facebook-icon">
+                    </a>
+                    <a href="http://#">
+                        <img src="../images/icon-twitter.svg" alt="twitter-icon">
+                    </a>
+                    <a href="http://#">
+                        <img src="../images/icon-pinterest.svg" alt="pinterest-icon">
+                    </a>
+                    <a href="http://#">
+                        <img src="../images/icon-instagram.svg" alt="instagram-icon">
+                    </a>
+                </section>   
+            </section>         
+        </footer>
+        
+
+    </main>
+    </body>
+</html>
