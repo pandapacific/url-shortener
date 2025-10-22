@@ -1,0 +1,44 @@
+@import "tailwindcss";
+:root {
+  --prime-blue: hsl(180, 66%, 49%);
+  --prime-purple: hsl(257, 27%, 26%);
+  --sec-red: hsl(0, 87%, 67%);
+  --neutral-lighter: hsl(0, 0%, 75%);
+  --neutral-light: hsl(257, 7%, 40%);
+  --neutral-dark: ;
+  --neutral-darker: hsl(260, 8%, 14%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+main {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+.sectionOne h2 {
+  color: var(--neutral-darker);
+}
+.text {
+  color: var(--neutral-light);
+}
+button {
+  background-color: var(--prime-blue);
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: hsl(180, 66%, 60%);
+}
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+ul li {
+  transition: color 0.2s ease;
+  transition: font-weight 0.2s ease;
+}
+ul li:hover {
+  font-weight: 500;
+  color: hsl(180, 66%, 60%);
+}
