@@ -1,11 +1,13 @@
+// ...existing code...
 {
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs18.x"
     }
   },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" },
-    { "src": "/(.*)", "dest": "/src/$1" }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1.js" },
+    { "source": "/", "destination": "/src/index.html" },
+    { "source": "/(.*)", "destination": "/src/$1" }
   ]
 }
